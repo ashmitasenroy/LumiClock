@@ -9,7 +9,7 @@ function App() {
   const [locked, setLocked] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [currentVideo, setCurrentVideo] = useState('/bg1.mp4');
-  const [view, setView] = useState('clock'); // 'clock' or 'home'
+  const [view, setView] = useState('clock'); 
 
   const handleLockToggle = () => {
     const docElm = document.documentElement;
@@ -27,14 +27,21 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Background video */}
-      <video className="background-video" autoPlay loop muted playsInline key={currentVideo}>
+      {/* Background video with preload */}
+      <video
+        className="background-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        key={currentVideo}
+      >
         <source src={currentVideo} type="video/mp4" />
       </video>
 
       {view === 'clock' ? (
         <>
-          {/* Top Controls (only if not locked) */}
           {!locked && (
             <div className="top-controls">
               <button className="nav-btn" onClick={() => setView('home')}>🏠 Home</button>
@@ -43,21 +50,17 @@ function App() {
             </div>
           )}
 
-          {/* Clock Display */}
           <div className="overlay">
             <DigitalClock />
           </div>
 
-          {/* Lock/Unlock button */}
           <button className="lock-btn" onClick={handleLockToggle}>
             {locked ? '🔓 Unlock' : '🔒 Lock'}
           </button>
 
-          {/* Settings Panel */}
           <SettingsPanel visible={showSettings} onClose={() => setShowSettings(false)} />
         </>
       ) : (
-        // Home View
         <HomePanel setView={setView} />
       )}
     </div>
