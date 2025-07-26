@@ -39,7 +39,7 @@ To run Lumi Clock on your local machine:
 
 2.  **Navigate into the directory:**
     ```sh
-    cd lumi-clock
+    cd bloom
     ```
 
 3.  **Install dependencies:**
