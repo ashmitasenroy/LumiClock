@@ -1,20 +1,8 @@
-
----
-
-### **2. For `Lumi-Clock`**
-*(This README focuses on user features and the problem it solves, which is great for showing user empathy.)*
-
-```markdown
 # Lumi Clock - Immersive Productivity Web App
 
 Lumi Clock is a clean, minimalist, and immersive web application designed to create a focused environment for work or study. It replaces a cluttered desktop with a beautiful, functional, and distraction-free interface.
-
+<!-- This is the code for the clickable "Live Demo" badge -->
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://lumi-clock.vercel.app/)
-
-![GIF of Lumi Clock in action, showing the live background and timer](![Uploading image.png…]()
-)
-
----
 
 ### 🎯 The Problem
 
@@ -22,14 +10,14 @@ In a world full of digital distractions, finding a quiet space to focus is diffi
 
 ---
 
-### 🛠️ Tech Stack
+###  🛠️ Tech Stack
 
 - **Frontend:** React.js, HTML5, CSS3
 - **Deployment:** Vercel
 
 ---
 
-### ✨ Features
+###  ✨ Features
 
 - **Live HD Video Background:** A calming, dynamic background to help you stay relaxed.
 - **Essential Productivity Tools:** Includes a clean Notepad, a simple Timer, and a Calendar.
@@ -51,7 +39,7 @@ To run Lumi Clock on your local machine:
 
 2.  **Navigate into the directory:**
     ```sh
-    cd bloom
+    cd lumi-clock
     ```
 
 3.  **Install dependencies:**
